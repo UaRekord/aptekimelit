@@ -69,20 +69,32 @@ btn.addEventListener('click', function () {
 //	menu.classList.remove('hide');
 //
 const features = document.querySelector('.features-items'),
-      team = document.querySelector('.team-people');
+      team = document.querySelector('.team-people'),
+      input = document.querySelector('.team-input');
 
-let flktyFeat = new Flickity(features, {
+const flktyFeat = new Flickity(features, {
   // options
   cellAlign: 'left',
   contain: true,
   prevNextButtons: false
 });
 
-let flktyTeam = new Flickity(team, {
+const flktyTeam = new Flickity(team, {
   // options
   cellAlign: 'left',
   contain: true,
-  prevNextButtons: false
+  prevNextButtons: true,
+  freeScroll: true,
+  pageDots: false
+});
+
+const flktyInput = new Flickity(input, {
+  // options
+  cellAlign: 'left',
+  contain: true,
+  prevNextButtons: true,
+  freeScroll: true,
+  pageDots: false
 });
 
 flktyTeam.on('scroll', function (progress) {
