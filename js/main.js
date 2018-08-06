@@ -66,6 +66,11 @@ btn.addEventListener('click', function () {
 	burger.forEach(item => item.classList.toggle('active'));
 	})
 
+menu.addEventListener('click', function () {
+	wrapper.classList.remove('active');
+	menu.classList.remove('active');
+	burger.forEach(item => item.classList.remove('active'));
+		})	
 //	menu.classList.remove('hide');
 //
 const features = document.querySelector('.features-items'),
