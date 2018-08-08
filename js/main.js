@@ -75,7 +75,8 @@ menu.addEventListener('click', function () {
 //
 const features = document.querySelector('.features-items'),
       team = document.querySelector('.team-people'),
-      input = document.querySelector('.team-input');
+      medInternal = document.querySelector('.med-internal'),
+      medExternal = document.querySelector('.med-external');
 
 const flktyFeat = new Flickity(features, {
   // options
@@ -93,7 +94,16 @@ const flktyTeam = new Flickity(team, {
   pageDots: false
 });
 
-const flktyInput = new Flickity(input, {
+const flktyInt = new Flickity(medInternal, {
+  // options
+  cellAlign: 'left',
+  contain: true,
+  prevNextButtons: true,
+  freeScroll: true,
+  pageDots: false
+});
+
+const flktyExt = new Flickity(medExternal, {
   // options
   cellAlign: 'left',
   contain: true,
